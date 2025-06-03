@@ -8,26 +8,26 @@
 <body>
   <div id="widgetContainer"></div>
 
-  <!-- BookVisit script -->
-  <script type="text/javascript" src="https://reservations.bookvisit.com/widget"></script>
-
-  <!-- Konfigurasjon -->
+  <!-- Konfigurasjon må komme først -->
   <script type="text/javascript" charset="UTF-8">
     const config = {};
     config.channelId = "74574f44-b103-4158-8d48-fb274e7c2c10";
-    config.widgetLayout = "Standard1Column"; // Merk: riktig camelCase
+    config.widgetLayout = "Standard1Column";
     config.WidgetContainerId = "widgetContainer";
     config.promoCode = "false";
     config.corpCode = "false";
     config.agentCode = "false";
-    config.openOption = "redirect";
+    config.openOption = "newwindow";
     config.loginLink = "false";
     config.currency = "NOK";
     config.languageCulture = "nb";
     config.accommodationTypePicker = "false";
     config.type = "single_property";
+  </script>
 
-    // Kjør widgeten
+  <!-- Last inn BookVisit-widget og kjør den -->
+  <script type="text/javascript" src="https://reservations.bookvisit.com/widget?type=accommodation"></script>
+  <script type="text/javascript">
     BV.SPWidget({ ...config });
   </script>
 </body>
