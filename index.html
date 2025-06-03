@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BookVisit Widget</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+    #widgetContainer {
+      width: 100%;
+      min-height: 800px;
+    }
+  </style>
+</head>
+<body>
+  <script src="https://reservations.bookvisit.com/widget?type=accommodation"></script>
+  <div id="widgetContainer"></div>
+  <script type="text/javascript">
+    const config = {};
+    config.channelId = "74574f44-b103-4158-8d48-fb274e7c2c10";
+    config.WidgetLayout = "Standard1column";
+    config.WidgetContainerId = "widgetContainer";
+    config.promoCode = "false";
+    config.oprCode = "false";
+    config.agentCode = "false";
+    config.openOption = "redirect";
+    config.loginLink = "false";
+    config.currency = "NOK";
+    config.languageCulture = "nb";
+  </script>
+</body>
+</html>
